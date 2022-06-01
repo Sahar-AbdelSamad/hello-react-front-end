@@ -5,7 +5,7 @@ const Greeting = () => {
   const greeting = useSelector((state) => state.greeting);
 
   return (
-    <h1> { greeting } </h1>
+    <h1>Greeting: { greeting } </h1>
   );
 };
 

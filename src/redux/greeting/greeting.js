@@ -1,6 +1,6 @@
 const GET_GREETING = 'hello-react-front-end/greeting/GET_GREETINGS';
 
-const initialState = 'test';
+const initialState = '';
 
 const greetingReducer = (state = initialState, action) => {
   switch (action.type) {
@@ -19,7 +19,7 @@ export const getMessage = (payload) => ({
 });
 
 export const getGreeting = () => async (dispatch) => {
-  const response = await fetch('http://localhost:3000/v1/greeting');
+  const response = await fetch('http://127.0.0.1:8000/v1/greeting');
   const data = await response.json();
   dispatch(getMessage(data.message));
 };
